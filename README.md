@@ -11,20 +11,21 @@ pip install pyheartbeat
 # Example
 
 ```python
-===============================================================================================================================
+======================================================================================================
 from pyheartbeat import setUrl, heartbeat, killHeartbeat
 
 # Set the URL for sending pulses
-setUrl("https://{your_url}")
+setUrl("https://your_url")
 
 # Start the heartbeat with a pulse every x seconds
-heartbeat(interval = {seconds}, name = '{process name}', description = '{process description}', additional_info = {''}, show_response = True)
+heartbeat(interval = 600, name = 'process name', description = 'process description',
+additional_info = 'additional info', show_response = True, show_logs = True)
 
 # Your main script logic goes here...
 
 # When your script ends or encounters an error, stop the heartbeat
 killHeartbeat()
-===============================================================================================================================
+======================================================================================================
 ```
 
 # License
